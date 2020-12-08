@@ -1,6 +1,6 @@
 
 "Vim-plug management file
-source ./plug.vim
+source ~/.vim/plug.vim
 
 "NERDTree configuration
 let NERDTreeMinimalUI=1
