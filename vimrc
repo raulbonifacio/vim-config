@@ -11,8 +11,8 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeWinSize=45
 let NERDTreeCascadeSingleChildDir=1
 let NERDTreeIgnore=['\~$'. '\.git', 'node_modules', 'vendor']
-let g:NERDTreeDirArrowCollapsible = ''
-let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = '📂'
+let g:NERDTreeDirArrowExpandable = '📁'
 
 "Airline configuration
 "let g:airline_theme='jellybeans'
@@ -55,17 +55,18 @@ let g:coc_global_extensions=[
 			\ 'coc-snippets'
 			\]
 
-"VRC options 
+"VRC options
 let g:vrc_auto_format_response_enabled = 1
 let g:vrc_syntax_highlight_response = 0
 let g:vrc_response_default_content_type = 'application/json'
 let g:vrc_auto_format_response_patterns = {
-  	\ 'json': 'jq --tab "."',
-  	\ 'xml': 'xmllint --format -',
+	\ 'json': 'jq --tab "."',
+	\ 'xml': 'xmllint --format -',
 	\}
 
 "Keybindings
-nnoremap <c-p> :GFiles<CR>
+nnoremap <leader>g :GFiles<CR>
+nnoremap <leader>b :Buffers<CR>
 nnoremap <leader><space> :Files <CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
 "nnoremap <leader>c :VCoolor<CR>
@@ -85,11 +86,11 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 			\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 inoremap <silent><expr> <TAB>
-	  \ pumvisible() ? coc#_select_confirm() :
-	  \ coc#expandableOrJumpable() ?
-	  \ "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-	  \ <SID>check_back_space() ? "\<TAB>" :
-	  \ coc#refresh()
+	\ pumvisible() ? coc#_select_confirm() :
+	\ coc#expandableOrJumpable() ?
+	\ "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+	\ <SID>check_back_space() ? "\<TAB>" :
+	\ coc#refresh()
 
 function! s:check_back_space() abort
   let col = col('.') - 1
