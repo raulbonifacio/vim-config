@@ -10,7 +10,7 @@ let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
 let NERDTreeWinSize=45
 let NERDTreeCascadeSingleChildDir=1
-let NERDTreeIgnore=['\~$'. '\.git', 'node_modules', 'vendor']
+let NERDTreeIgnore=['\~$', '\.git', 'node_modules', 'vendor']
 let g:NERDTreeDirArrowCollapsible = '📂'
 let g:NERDTreeDirArrowExpandable = '📁'
 
@@ -123,7 +123,7 @@ set ignorecase
 set smartcase
 set incsearch
 set wildmenu
-set wildignore+=**/node_modules/**
+set wildignore+=*/node_modules/**
 set path+=**
 set hidden
 set noswapfile
