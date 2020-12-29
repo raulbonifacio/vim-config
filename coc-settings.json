@@ -1,12 +1,12 @@
 {
-	"java.home": "/usr/lib/jvm/java-14-openjdk-amd64",
-	"suggest.detailMaxLength": 250,
-	"typescript.suggest.completeFunctionCalls": false,
-	"javascript.suggest.completeFunctionCalls": false,
-	"typescript.suggestionActions.enabled": false,
-	"javascript.suggestionActions.enabled": false,
-	"emmet.includeLanguages": { "javascript": "javascriptreact", "pug": "jade"},
-	"prettier.useTabs": true,
-	"prettier.arrowParens": "avoid",
-	"prettier.printWidth": 80
+  "java.home": "/usr/lib/jvm/java-14-openjdk-amd64",
+  "suggest.detailMaxLength": 250,
+  "typescript.suggest.completeFunctionCalls": false,
+  "javascript.suggest.completeFunctionCalls": false,
+  "typescript.suggestionActions.enabled": false,
+  "javascript.suggestionActions.enabled": false,
+  "emmet.includeLanguages": { "javascript": "javascriptreact", "pug": "jade" },
+  "prettier.useTabs": false,
+  "prettier.arrowParens": "avoid",
+  "prettier.printWidth": 120
 }

@@ -1,8 +1,7 @@
 
 "Vim-plug management file
-source ./plug.vim
+source ~/.vim/plug.vim
 
-"NERDTree configuration
 let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 let NERDTreeAutoDeleteBuffer=1
@@ -55,8 +54,7 @@ let g:coc_global_extensions=[
 			\ 'coc-snippets'
 			\]
 
-"VRC options 
-let g:vrc_auto_format_response_enabled = 1
+"VRC optionslet g:vrc_auto_format_response_enabled = 1
 let g:vrc_syntax_highlight_response = 0
 let g:vrc_response_default_content_type = 'application/json'
 let g:vrc_auto_format_response_patterns = {
@@ -65,7 +63,8 @@ let g:vrc_auto_format_response_patterns = {
 	\}
 
 "Keybindings
-nnoremap <c-p> :GFiles<CR>
+nnoremap <leader>g :GFiles<CR>
+nnoremap <leader>b :Buffers<CR>
 nnoremap <leader><space> :Files <CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
 "nnoremap <leader>c :VCoolor<CR>
@@ -111,18 +110,19 @@ endfunction
 "Vim configuration
 set encoding=UTF-8
 set number
+set relativenumber
 set nowrap
 set backspace=indent,eol,start
-set relativenumber
 set autoindent
-set noexpandtab
-set tabstop=4
-set shiftwidth=4
+set expandtab
+set softtabstop=2
+set tabstop=2
+set shiftwidth=2
 set ignorecase
 set smartcase
 set incsearch
 set wildmenu
-set wildignore+=**/node_modules/**
+set wildignore+=*/node_modules/*,*/.git/**,*/.vim$
 set path+=**
 set hidden
 set noswapfile
@@ -132,8 +132,9 @@ set nobackup
 set noshowmatch
 set background=dark
 set termguicolors
-set t_Co=256
 language en_US.utf8
-colorscheme base16-default-dark
+colorscheme Atelier_EstuaryLight
 
-highlight Normal ctermfg=NONE ctermbg=NONE
+if (&term =~ '^xterm' && &t_Co == 256)
+    set t_ut= | set ttyscroll=1
+  endif
