@@ -69,16 +69,15 @@ nnoremap <leader>g :GFiles<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader><space> :Files <CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
-"nnoremap <leader>c :VCoolor<CR>
-nmap <leader>r <Plug>(coc-rename)
-nmap <leader>f <Plug>(coc-format)
-nmap <leader>i <Plug>(coc-implementation)
-nmap <leader>d <Plug>(coc-definition)
-nmap <leader>a <Plug>(coc-codeaction)
-nmap <leader>l <Plug>(coc-codeaction-line)
-nmap <leader>q <Plug>(coc-fix-current)
-nmap <leader>p <Plug>(coc-diagnostic-prev)
-nmap <leader>n <Plug>(coc-diagnostic-next)
+nmap <leader>cr <Plug>(coc-rename)
+nmap <leader>cf <Plug>(coc-format)
+nmap <leader>ci <Plug>(coc-implementation)
+nmap <leader>cd <Plug>(coc-definition)
+nmap <leader>ca <Plug>(coc-codeaction)
+nmap <leader>cl <Plug>(coc-codeaction-line)
+nmap <leader>cq <Plug>(coc-fix-current)
+nmap <leader>cp <Plug>(coc-diagnostic-prev)
+nmap <leader>cn <Plug>(coc-diagnostic-next)
 
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
 
