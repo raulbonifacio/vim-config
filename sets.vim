@@ -1,7 +1,7 @@
 set encoding=UTF-8
 set number
 set nowrap
-"set backspace=indent,eol,start
+set backspace=indent,eol,start
 set relativenumber
 set autoindent
 set noexpandtab

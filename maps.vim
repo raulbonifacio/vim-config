@@ -41,3 +41,5 @@ function! s:show_documentation()
 		call CocAction('doHover')
 	endif
 endfunction
+
+command -range Comment  <line1>,<line2>s#(.*)#//\1/g
