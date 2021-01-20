@@ -1,7 +1,7 @@
 
 ! command -v git > /dev/null && echo 'Git is not installed. (Required by vim-plug)' ||  \
 ! command -v node > /dev/null &&  echo 'Node JS is not installed. (Required by vim-coc)' || \
-! command -v jq > /dev/null &&  echo 'JqS is not installed. (Required by Vim Rest Console)' || \
+! command -v jq > /dev/null &&  echo 'Jq is not installed. (Required by Vim Rest Console)' || \
 ! command -v rg > /dev/null &&  echo 'ripgrep is not installed. (Required by CocSearch)' && \
 echo 'Please install these dependencies to proceed.' && \
 exit;
