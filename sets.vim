@@ -1,3 +1,4 @@
+language en_US.utf8
 set encoding=UTF-8
 set number
 set nowrap
@@ -20,9 +21,14 @@ set undofile
 set nobackup
 set noshowmatch
 set background=dark
-set termguicolors
-set t_Co=256
 
-language en_US.utf8
-colorscheme base16-default-dark
+set notermguicolors
+
+colorscheme jellybeans  
+
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+hi! Normal ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE
 highlight Normal ctermfg=NONE ctermbg=NONE

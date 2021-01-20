@@ -2,7 +2,7 @@
 nnoremap <leader>g :GFiles<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader><space> :Files <CR>
-nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <silent> <leader>t :NERDTreeToggle<CR>
 nmap <leader>cr <Plug>(coc-rename)
 nmap <leader>cf <Plug>(coc-format)
 nmap <leader>ci <Plug>(coc-implementation)
@@ -42,4 +42,6 @@ function! s:show_documentation()
 	endif
 endfunction
 
-command -range Comment  <line1>,<line2>s#(.*)#//\1/g
+command! -range -nargs=? Comment  <line1>,<line2>s#\(.*\)#\<args>\1#
+command! -range -nargs=? Uncomment  <line1>,<line2>s#\<args>\(.*\)#\1#
+
