@@ -11,8 +11,10 @@ curl -fLo ./autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 #Run and configurer vim
-vim --cmd 'source ./plug.vim | PlugClean | PlugInstall | qa!';
+vim -N --cmd 'source ./plug.vim | PlugClean | PlugInstall | qa!';
 
 #Create the undodir
 ! test -d undodir && mkdir undodir;
 
+#Clears the screen 
+clear;

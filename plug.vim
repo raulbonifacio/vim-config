@@ -26,8 +26,8 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeWinSize=45
 let NERDTreeCascadeSingleChildDir=1
 let NERDTreeIgnore=['\~$', '\.git', 'node_modules', 'vendor']
-let g:NERDTreeDirArrowCollapsible = '📂'
-let g:NERDTreeDirArrowExpandable = '📁'
+"let g:NERDTreeDirArrowCollapsible = '📂'
+"let g:NERDTreeDirArrowExpandable = '📁'
 
 "Airline configuration
 "let g:airline_theme='jellybeans'
