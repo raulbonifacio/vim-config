@@ -37,7 +37,6 @@ let g:airline#extensions#clock#updatetime = 1000
 let g:airline#extensions#clock#format = '%H:%M:%S'
 
 "FZF configuration
-let g:fzf_preview_window=''
 let g:fzf_layout= {'window':{'width': 0.7, 'height': 0.5, 'yoffset': 0.5, 'border': 'sharp'}}
 let g:fzf_colors =
     \ { 'fg':      ['fg', 'Normal'],
@@ -53,7 +52,7 @@ let g:fzf_colors =
       \ 'marker':  ['fg', 'Keyword'],
       \ 'spinner': ['fg', 'Label'],
       \ 'header':  ['fg', 'Comment'] }
-
+"
 "CocConfiguration
 let g:coc_global_extensions=[
 			\ 'coc-json',
