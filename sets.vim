@@ -31,5 +31,8 @@ set fillchars+="vert: "
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
+highlight ColorColumn ctermbg=gray
+set colorcolumn=80
+
 "hi! Normal ctermbg=NONE guibg=NONE
 "hi! NonText ctermbg=NONE guibg=NONE

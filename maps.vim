@@ -13,6 +13,9 @@ nmap <leader>cl <Plug>(coc-codeaction-line)
 nmap <leader>cq <Plug>(coc-fix-current)
 nmap <leader>cp <Plug>(coc-diagnostic-prev)
 nmap <leader>cn <Plug>(coc-diagnostic-next)
+nmap <leader>cce :CocEnable <CR>
+nmap <leader>ccd :CocDisable <CR>
+nmap <leader>ccr :CocRestart <CR>
 
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
 
