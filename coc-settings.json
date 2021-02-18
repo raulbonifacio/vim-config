@@ -1,6 +1,5 @@
 {
 	"java.home": "/usr/lib/jvm/java-15-openjdk",
-	"suggest.detailMaxLength": 250,
 	"typescript.suggest.completeFunctionCalls": false,
 	"javascript.suggest.completeFunctionCalls": false,
 	"typescript.suggestionActions.enabled": false,
