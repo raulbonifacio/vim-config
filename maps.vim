@@ -1,8 +1,8 @@
 
-nnoremap <leader>g :GFiles<CR>
-nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>r :Rg<CR>
-nnoremap <leader><space> :Files <CR>
+nnoremap <leader>fg :GFiles<CR>
+nnoremap <leader>fb :Buffers<CR>
+nnoremap <leader>fr :Rg<CR>
+nnoremap <leader>ff :Files <CR>
 nnoremap <silent> <leader>t :NERDTreeToggle<CR>
 nmap <leader>cr <Plug>(coc-rename)
 nmap <leader>cf <Plug>(coc-format)

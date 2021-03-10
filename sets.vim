@@ -1,5 +1,3 @@
-language en_US.utf8
-set encoding=UTF-8
 set number
 set nowrap
 set nocompatible
@@ -27,14 +25,14 @@ set background=dark
 
 set termguicolors
 
-colorscheme nord  
-set fillchars+="vert: "
+colorscheme base16-default-dark 
+"set fillchars+="vert: "
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-highlight ColorColumn ctermbg=gray
-set colorcolumn=80
+"highlight ColorColumn ctermbg=gray
+"set colorcolumn=80
 
 "hi! Normal ctermbg=NONE guibg=NONE
 "hi! NonText ctermbg=NONE guibg=NONE

@@ -1,10 +1,11 @@
 {
 	"java.home": "/usr/lib/jvm/java-15-openjdk",
+	"tsserver.disableAutomaticTypeAcquisition": false,
 	"typescript.suggest.completeFunctionCalls": false,
 	"javascript.suggest.completeFunctionCalls": false,
 	"typescript.suggestionActions.enabled": false,
 	"javascript.suggestionActions.enabled": false,
-	"emmet.includeLanguages": { "javascript": "javascriptreact", "pug": "jade"},
+	"emmet.includeLanguages": { "pug": "jade" },
 	"prettier.useTabs": true,
 	"prettier.arrowParens": "avoid",
 	"prettier.printWidth": 80
