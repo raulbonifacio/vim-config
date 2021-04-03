@@ -25,7 +25,7 @@ set background=dark
 
 set termguicolors
 
-colorscheme base16-default-dark 
+colorscheme base16-monokai
 "set fillchars+="vert: "
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"

@@ -66,6 +66,7 @@ let g:coc_global_extensions=[
 			\ 'coc-phpls',
 			\ 'coc-sh',
 			\ 'coc-prettier',
+			\ 'coc-go',
 			\ 'coc-snippets'
 			\]
 

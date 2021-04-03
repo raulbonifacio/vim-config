@@ -5,6 +5,7 @@
 	"javascript.suggest.completeFunctionCalls": false,
 	"typescript.suggestionActions.enabled": false,
 	"javascript.suggestionActions.enabled": false,
+	"javascript.preferences.importModuleSpecifierEnding": "js",
 	"emmet.includeLanguages": { "pug": "jade" },
 	"prettier.useTabs": true,
 	"prettier.arrowParens": "avoid",
