@@ -1,7 +1,25 @@
 
-"Vim-plug management file
-source ~/.vim/plug.vim
+call plug#begin('$HOME/.vim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'flazz/vim-colorschemes'
+Plug 'chriskempson/base16-vim'
+Plug 'enricobacis/vim-airline-clock'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'danilo-augusto/vim-afterglow'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'diepm/vim-rest-console'
+Plug 'digitaltoad/vim-pug'
+Plug 'bfrg/vim-jqplay'
+Plug 'lambdalisue/battery.vim'
+call plug#end()
 
+"NERDTree config
+let NERDTreeHighlightCursorline=0
 let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 let NERDTreeAutoDeleteBuffer=1
@@ -28,7 +46,7 @@ let g:fzf_colors =
       \ 'bg':      ['bg', 'Normal'],
       \ 'hl':      ['fg', 'Comment'],
       \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+      \ 'bg+':     ['bg', 'Normal', 'Normal'],
       \ 'hl+':     ['fg', 'Statement'],
       \ 'info':    ['fg', 'PreProc'],
       \ 'border':  ['fg', 'Ignore'],
@@ -55,28 +73,28 @@ let g:coc_global_extensions=[
 			\]
 
 "VRC optionslet g:vrc_auto_format_response_enabled = 1
-let g:vrc_syntax_highlight_response = 0
 let g:vrc_response_default_content_type = 'application/json'
+let g:vrc_output_buffer_name = '__VRC_OUTPUT.json'
 let g:vrc_auto_format_response_patterns = {
-  	\ 'json': 'jq --tab "."',
+  	\ 'json': 'jq "."',
   	\ 'xml': 'xmllint --format -',
 	\}
 
+
 "Keybindings
-nnoremap <leader>g :GFiles<CR>
-nnoremap <leader>b :Buffers<CR>
-nnoremap <leader><space> :Files <CR>
+nnoremap <leader>fg :GFiles<CR>
+nnoremap <leader>fb :Buffers<CR>
+nnoremap <leader>ff :Files <CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
-"nnoremap <leader>c :VCoolor<CR>
-nmap <leader>r <Plug>(coc-rename)
-nmap <leader>f <Plug>(coc-format)
-nmap <leader>i <Plug>(coc-implementation)
-nmap <leader>d <Plug>(coc-definition)
-nmap <leader>a <Plug>(coc-codeaction)
-nmap <leader>l <Plug>(coc-codeaction-line)
-nmap <leader>q <Plug>(coc-fix-current)
-nmap <leader>p <Plug>(coc-diagnostic-prev)
-nmap <leader>n <Plug>(coc-diagnostic-next)
+nmap <leader>cr <Plug>(coc-rename)
+nmap <leader>cf <Plug>(coc-format)
+nmap <leader>ci <Plug>(coc-implementation)
+nmap <leader>cd <Plug>(coc-definition)
+nmap <leader>ca <Plug>(coc-codeaction)
+nmap <leader>cl <Plug>(coc-codeaction-line)
+nmap <leader>cq <Plug>(coc-fix-current)
+nmap <leader>cp <Plug>(coc-diagnostic-prev)
+nmap <leader>cn <Plug>(coc-diagnostic-next)
 
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
 
@@ -118,6 +136,7 @@ set expandtab
 set softtabstop=2
 set tabstop=2
 set shiftwidth=2
+set foldmethod=marker
 set ignorecase
 set smartcase
 set incsearch
@@ -130,11 +149,14 @@ set undodir=~/.vim/undodir
 set undofile
 set nobackup
 set noshowmatch
+set visualbell
 set background=dark
-set termguicolors
+set t_Co=16
+set fillchars+=vert:\ "
 language en_US.utf8
-colorscheme Atelier_EstuaryLight
+colorscheme default
 
-if (&term =~ '^xterm' && &t_Co == 256)
-    set t_ut= | set ttyscroll=1
-  endif
+"Gitgutter configuration - has to be at the bottom of the config file for some
+"reason...
+let g:gitgutter_set_sign_backgrounds=0
+highlight SignColumn guibg=NONE ctermbg=NONE
