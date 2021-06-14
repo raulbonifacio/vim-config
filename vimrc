@@ -1,5 +1,4 @@
-
-"Plugins {{{
+"Plugins 
 
 call plug#begin('$HOME/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -9,11 +8,11 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'flazz/vim-colorschemes'
-Plug 'chriskempson/base16-vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'enricobacis/vim-airline-clock'
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'chriskempson/base16-vim'
+"Plug 'enricobacis/vim-airline-clock'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 Plug 'danilo-augusto/vim-afterglow'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'diepm/vim-rest-console'
@@ -24,7 +23,11 @@ Plug 'tyru/open-browser.vim'
 "Plug 'scrooloose/vim-slumlord'
 call plug#end()
 
+let g:gitgutter_set_sign_backgrounds=0
+highlight SignColumn guibg=NONE ctermbg=NONE
+
 "NERDTree configuration
+let NERDTreeHighlightCursorline=0
 let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 let NERDTreeAutoDeleteBuffer=1
@@ -34,6 +37,9 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeWinSize=45
 let NERDTreeCascadeSingleChildDir=1
 let NERDTreeIgnore=['\~$', '\.git', 'node_modules', 'vendor']
+let NERDTreeDirArrowCollapsible="🗁 "
+let NERDTreeDirArrowExpandable="🗀 "
+
 autocmd FileType nerdtree setlocal relativenumber
 
 "Vim Airline Clock configuration
@@ -41,13 +47,14 @@ let g:airline#extensions#clock#updatetime = 1000
 let g:airline#extensions#clock#format = '%H:%M:%S'
 
 "FZF configuration
-let g:fzf_layout= {'window':{'width': 0.7, 'height': 0.5, 'yoffset': 0.5, 'border': 'sharp'}}
+let g:fzf_preview_window = []
+let g:fzf_layout= {'window':{'width': 1, 'height': 1, 'relative': v:true, 'border': 'no'}}
 let g:fzf_colors =
     \ { 'fg':      ['fg', 'Normal'],
       \ 'bg':      ['bg', 'Normal'],
       \ 'hl':      ['fg', 'Comment'],
       \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+      \ 'bg+':     ['bg', 'Normal', 'Normal'],
       \ 'hl+':     ['fg', 'Statement'],
       \ 'info':    ['fg', 'PreProc'],
       \ 'border':  ['fg', 'Ignore'],
@@ -56,7 +63,7 @@ let g:fzf_colors =
       \ 'marker':  ['fg', 'Keyword'],
       \ 'spinner': ['fg', 'Label'],
       \ 'header':  ['fg', 'Comment'] }
-"
+
 "CocConfiguration
 let g:coc_global_extensions=[
 			\ 'coc-json',
@@ -86,9 +93,9 @@ let g:vrc_curl_opts = {
   \ '--include': '',
   \ '-H': ['Accept: application/json', 'Content-type: application/json'],
 \}
-"}}}
 
-"Maps {{{
+
+"Maps 
 
 nnoremap <leader>fg :GFiles<CR>
 nnoremap <leader>fb :Buffers<CR>
@@ -137,9 +144,9 @@ function! s:show_documentation()
 	endif
 endfunction
 
-"}}}
 
-"Sets {{{
+
+"Sets 
 set number
 set nowrap
 set nocompatible
@@ -166,23 +173,23 @@ set noshowmatch
 set updatetime=200
 set background=dark
 
-set termguicolors
-"{{{
-colorscheme base16-flat
-"set fillchars+="vert: 
-"}}}
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set t_Co=16
 
+"hi VertSplit guibg=NONE guifg=NONE ctermbg=NONE ctermfg=NONE
+highlight Pmenu ctermbg=gray guibg=gray
+set fillchars=vert:\ "
+
+"set termguicolors
+"colorscheme base16-eighties
+"set fillchars+="vert:
+"let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 "highlight ColorColumn ctermbg=gray
 "set colorcolumn=80
+"hi VertSplit  NONE
 
-"hi! Normal ctermbg=NONE guibg=NONE
-"hi! NonText ctermbg=NONE guibg=NONE
-"}}}
-
-"Cmds {{{
+"Cmds 
 
 autocmd BufWrite *.php set expandtab | retab | set noexpandtab
 
-"}}}
+

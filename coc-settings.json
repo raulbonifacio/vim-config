@@ -8,5 +8,6 @@
 	"emmet.includeLanguages": { "pug": "jade" },
 	"prettier.useTabs": true,
 	"prettier.arrowParens": "avoid",
-	"prettier.printWidth": 80
+	"prettier.printWidth": 80,
+	"intelephense.completion.triggerParameterHints": false
 }
