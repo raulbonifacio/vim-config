@@ -173,15 +173,15 @@ set t_Co=16
 set fillchars+=vert:\ "
 
 highlight SignColumn ctermbg=NONE
-highlight Pmenu ctermfg=8 ctermbg=0
-highlight PmenuSel ctermfg=7 ctermbg=0
+highlight Pmenu ctermfg=7 ctermbg=0
+highlight PmenuSel ctermfg=15 ctermbg=8
 highlight VertSplit ctermfg=0 ctermbg=7
 highlight StatusLine ctermfg=0 ctermbg=15
 highlight StatusLineNC ctermfg=0 ctermbg=8
 highlight StatusLineTerm ctermfg=15 ctermbg=0
 highlight StatusLineTermNC ctermfg=8 ctermbg=0
-highlight TabLine ctermfg=15 ctermbg=0
-highlight TabLineSel ctermfg=8 ctermbg=0
+highlight TabLine ctermfg=8 ctermbg=0
+highlight TabLineSel ctermfg=15 ctermbg=0
 highlight TablineFill ctermfg=0 ctermbg=0
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
