@@ -1,4 +1,4 @@
-"Plugins 
+"Plugins
 
 call plug#begin('$HOME/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -48,7 +48,7 @@ let g:airline#extensions#clock#format = '%H:%M:%S'
 
 "FZF configuration
 let g:fzf_preview_window = []
-let g:fzf_layout= {'window':{'width': 0.8, 'height': 0.5, 'relative': v:true, 'border': 'sharp'}}
+let g:fzf_layout= {'window':{'width': 0.5, 'height': 0.5, 'border': 'sharp'}}
 let g:fzf_colors =
     \ { 'fg':      ['fg', 'Normal'],
       \ 'bg':      ['bg', 'Normal'],
@@ -94,7 +94,7 @@ let g:vrc_curl_opts = {
   \ '-H': ['Accept: application/json', 'Content-type: application/json'],
 \}
 
-"Maps 
+"Maps
 
 nnoremap <leader>fg :GFiles<CR>
 nnoremap <leader>fb :Buffers<CR>
@@ -143,11 +143,12 @@ function! s:show_documentation()
 	endif
 endfunction
 
-"Sets 
+"Sets
 set number
 set nowrap
 set nocompatible
 set backspace=indent,eol,start
+set noshowmode
 set relativenumber
 set autoindent
 set noexpandtab
@@ -175,7 +176,7 @@ set fillchars+=vert:\ "
 highlight SignColumn ctermbg=NONE
 highlight Pmenu ctermfg=7 ctermbg=0
 highlight PmenuSel ctermfg=15 ctermbg=8
-highlight VertSplit ctermfg=0 ctermbg=7
+highlight VertSplit ctermfg=0 ctermbg=0
 highlight StatusLine ctermfg=0 ctermbg=15
 highlight StatusLineNC ctermfg=0 ctermbg=8
 highlight StatusLineTerm ctermfg=15 ctermbg=0
@@ -183,11 +184,14 @@ highlight StatusLineTermNC ctermfg=8 ctermbg=0
 highlight TabLine ctermfg=8 ctermbg=0
 highlight TabLineSel ctermfg=15 ctermbg=0
 highlight TablineFill ctermfg=0 ctermbg=0
+highlight Search ctermfg=9 ctermbg=8
+highlight IncSearch ctermfg=8 ctermbg=9
+highlight MatchParen ctermbg=8NONE
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-
-"Cmds 
+"Cmds
 
 autocmd BufWrite *.php set expandtab | retab | set noexpandtab
+
